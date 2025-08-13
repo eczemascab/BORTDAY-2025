@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #6ec9e0;
+}
+.card {
+  height: 70%;
+  aspect-ratio: 1.6 / 1;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+  transition: 1s;
+}
+.card:hover {
+  transform: rotate(-3deg);
+}
+.card:hover .outside {
+  transform: rotateY(-170deg);
+}
+.outside,
+.inside {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50.1%;
+}
+.inside {
+  background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+  line-height: 3;
+  padding: 0 3vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 50%;
+}
+.outside {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: 1;
+  transform-origin: left;
+  transition: 2s;
+  cursor: pointer;
+}
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+.front {
+  background-image: url(https://i.etsystatic.com/35768066/r/il/fd41bd/3946870111/il_fullxfull.3946870111_7erv.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.back {
+  transform: rotateY(180deg);
+  background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+  line-height: 3;
+  padding: 0 3vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.inside h1 {
+  font-size: 1.6vh;
+  line-height: 1.25;
+  font-weight: normal;
+  text-align: right;
+}
+.inside p,
+.outside p {
+  font-size: 1.6vh;
+  line-height: 1.25;
+  text-align: justify;
+  vertical-align: top;
+}
+.button {
+  background-color: #8fdaeb;
+  color: white; /* White text */
+  padding: 0.5vh 0.5vh;
+  border: none; /* No border */
+  border-radius: 0.5vh; /* Rounded corners */
+  font-size: 1.6vh; /* Text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.1s linear; /* Smooth transition for background color */
+  box-shadow: 0 0.4vh #cccccc;
+}
+.button:hover {
+  background-color: #92DDF0;
+  color: white;
+}
+.button:active {
+  background-color: #8CD3E6;
+  box-shadow: 0 0.5vh #cccccc;
+  transform: translateY(4px);
+}
+@keyframes spin {
+  0% {
+    transform: translateY(-1000px);
+    /*     transform: rotate(180deg); */
+  }
+  100% {
+    /*     transform: rotate(360deg); */
+    transform: translateY(0px);
+  }
+}
+.tix {
+  height: 27%;
+  aspect-ratio: 239 / 112;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url(https://i.postimg.cc/sxNgm4NH/Untitled-drawing.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+  animation: spin 1s ease-in-out;
+}
