@@ -62,7 +62,7 @@ body {
   transform: rotateX(0deg);
 }
 .front {
-  background-image: url(https://i.etsystatic.com/35768066/r/il/fd41bd/3946870111/il_fullxfull.3946870111_7erv.jpg);
+  background-image: url(https://i.postimg.cc/L58NCzQr/cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -103,11 +103,11 @@ body {
   box-shadow: 0 0.4vh #cccccc;
 }
 .button:hover {
-  background-color: #92DDF0;
+  background-color: #92ddf0;
   color: white;
 }
 .button:active {
-  background-color: #8CD3E6;
+  background-color: #8cd3e6;
   box-shadow: 0 0.5vh #cccccc;
   transform: translateY(4px);
 }
